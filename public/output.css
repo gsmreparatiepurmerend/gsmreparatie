@@ -1967,6 +1967,11 @@ html {
   grid-row-start: 1;
 }
 
+.mx-7 {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
 .ml-40 {
   margin-left: 10rem;
 }
