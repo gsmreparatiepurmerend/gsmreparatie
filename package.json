@@ -9,7 +9,6 @@
     "build-js": "esbuild src/app.js --outfile=public/app.js --bundle --watch"
   },
   "dependencies": {
-    "alpinejs": "^3.13.10",
-    "fullpage.js": "^4.0.22"
+    "alpinejs": "^3.13.10"
   }
 }
