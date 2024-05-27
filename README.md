@@ -31,6 +31,6 @@ cd cd gsmreparatie
 Installeer de benodigde dependencies:
 bun install
 
-Start alpine en tailwindcss
+Start alpine en tailwindcss with:
 bun run build-css 
 bun run build-js
