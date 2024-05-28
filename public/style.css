@@ -1,10 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .sections {
   overflow: auto;
   height: 100vh;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge, and Firefox */
 }
 .sections > div {
   scroll-snap-align: start;
+}
+.sections::-webkit-scrollbar {
+  display: none;
+}
+.sections {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }/*# sourceMappingURL=style.css.map */
