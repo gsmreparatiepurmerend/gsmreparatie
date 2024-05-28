@@ -4,20 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Test Box</title>
 </head>
-<body>
-    <div x-data="{ open: false }">
-        <button @click="open = true">Expand</button>
-     
-        <span x-show="open">
-            Content...
-        </span>
+<body x-data='{white: true, activeSection: 1}'>
+    <div class="fixed flex flex-col justify-center h-screen space-y-4 px-10">
+        <div class='w-3 h-3 rounded-full border-2'
+        :class="{'border-black' : white, 'bg-black' : activeSection == 1}"
+        ></div>
+        <div class='w-3 h-3 rounded-full border-2'
+        :class="{'border-black' : white, 'bg-white' : activeSection == 2}"
+        ></div>
     </div>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+
+
+
+
+    <div class="sections">
+        <div 
+        x-intersect.half='white = true, activeSection = 1'
+        class="h-screen flex items-center justify-center" 
+        style="background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*xMuIOwjliGUPjkzukeWKfw.jpeg');">
+        </div>
+        <div 
+        x-intersect.half='white = false, activeSection = 2'
+        class="min-h-screen flex items-center justify-center" 
+        style="background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wMi1rc2g2cWt1Zy5qcGc.jpg');">
+        </div>
+    </div>
+   
 
       <script src="tailwind.config.js"></script>
 </body>
