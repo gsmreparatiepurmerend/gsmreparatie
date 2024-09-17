@@ -34,8 +34,14 @@ function laadTelefoonKaarten(telefoons) {
         figure.classList.add('snip1418');
 
         figure.innerHTML = `
-            <img src="${telefoon.images.front}" alt="${telefoon.name} - Front" class="telefoon-afbeelding-voor" />
-            <img src="${telefoon.images.back}" alt="${telefoon.name} - Back" class="telefoon-afbeelding-achter" />
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="${telefoon.images.front}" alt="${telefoon.name} - Front" class="telefoon-afbeelding-voor" />
+                </div>
+                <div class="card-back">
+                    <img src="${telefoon.images.back}" alt="${telefoon.name} - Back" class="telefoon-afbeelding-achter" />
+                </div>
+            </div>
             <div class="add-to-cart">
                 <i class="ion-android-add"></i><span>Add to Cart</span>
             </div>
