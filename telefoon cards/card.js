@@ -1,39 +1,55 @@
-// Mock data (vervang dit met fetch-aanroep als je een externe API gebruikt)
-const telefoons = [
-    {
-        naam: "iPhone 13",
-        afbeelding: "https://example.com/iphone13.jpg",
-        beschrijving: "De nieuwste iPhone met geavanceerde functies."
-    },
-    {
-        naam: "Samsung Galaxy S21",
-        afbeelding: "https://example.com/galaxy-s21.jpg",
-        beschrijving: "De nieuwste Samsung Galaxy met indrukwekkende prestaties."
-    },
-    {
-        naam: "Google Pixel 6",
-        afbeelding: "https://example.com/pixel6.jpg",
-        beschrijving: "De nieuwste Google-telefoon met geavanceerde AI-functies."
-    }
-];
+// Functie om telefoongegevens van de API te laden
+function laadTelefoonGegevens() {
+    fetch('card.json') // Zorg ervoor dat 'card.json' de juiste JSON bevat
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netwerkrespons was niet OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            laadTelefoonKaarten(data.iPhones);
+        })
+        .catch(error => {
+            console.error('Er was een probleem met de fetch-operatie:', error);
+        });
+}
 
-// Laad telefoondata in kaarten
-function laadTelefoonKaarten() {
-    const cardsContainer = document.getElementById('telefoon-cards');
+// Functie om telefoondata in kaarten te laden
+function laadTelefoonKaarten(telefoons) {
+    const container = document.getElementById('telefoon-container'); // Maak een div met dit ID in je HTML
+    container.innerHTML = ''; // Leeg de container voordat nieuwe kaarten worden toegevoegd
 
-    telefoons.forEach(telefoon => {
-        const card = document.createElement('div');
-        card.classList.add('card');
+    let rowContainer = null;
 
-        card.innerHTML = `
-            <img src="${telefoon.afbeelding}" alt="${telefoon.naam}">
-            <h2>${telefoon.naam}</h2>
-            <p>${telefoon.beschrijving}</p>
+    telefoons.forEach((telefoon, index) => {
+        if (index % 7 === 0) {
+            // Voeg een nieuwe rij toe voor elke 3 kaarten
+            rowContainer = document.createElement('div');
+            rowContainer.classList.add('row');
+            container.appendChild(rowContainer);
+        }
+
+        const figure = document.createElement('figure');
+        figure.classList.add('snip1418');
+
+        figure.innerHTML = `
+            <img src="${telefoon.images.front}" alt="${telefoon.name} - Front" class="telefoon-afbeelding-voor" />
+            <img src="${telefoon.images.back}" alt="${telefoon.name} - Back" class="telefoon-afbeelding-achter" />
+            <div class="add-to-cart">
+                <i class="ion-android-add"></i><span>Add to Cart</span>
+            </div>
+            <figcaption>
+                <h3>${telefoon.name} (${telefoon.releaseYear})</h3>
+                <p>Schermgrootte: ${telefoon.screenSizeInches}"</p>
+                <p>Kenmerken: ${telefoon.features.join(', ')}</p>
+            </figcaption>
+            <a href="#"></a>
         `;
 
-        cardsContainer.appendChild(card);
+        rowContainer.appendChild(figure);
     });
 }
 
-// Initialiseer kaarten bij het laden van de pagina
-document.addEventListener('DOMContentLoaded', laadTelefoonKaarten);
+// Initialiseer de API-aanroep bij het laden van de pagina
+document.addEventListener('DOMContentLoaded', laadTelefoonGegevens);
