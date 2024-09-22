@@ -2092,12 +2092,6 @@ html {
   border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
 }
 
-.border-x-blue-200 {
-  --tw-border-opacity: 1;
-  border-left-color: rgb(191 219 254 / var(--tw-border-opacity));
-  border-right-color: rgb(191 219 254 / var(--tw-border-opacity));
-}
-
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
