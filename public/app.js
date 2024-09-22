@@ -1588,11 +1588,7 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
     get raw() {
       return raw;
     },
-<<<<<<< HEAD
     version: "3.14.1",
-=======
-    version: "3.14.0",
->>>>>>> 40bc28a7f4f858b2e3b6ac58e485912493f19a83
     flushAndStopDeferringMutations,
     dontAutoEvaluateFunctions,
     disableEffectScheduling,
