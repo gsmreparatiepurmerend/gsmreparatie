@@ -1,6 +1,10 @@
 {
   "devDependencies": {
+<<<<<<< HEAD
     "daisyui": "^4.12.10",
+=======
+    "daisyui": "^4.11.1",
+>>>>>>> 40bc28a7f4f858b2e3b6ac58e485912493f19a83
     "esbuild": "^0.21.3",
     "tailwindcss": "^3.4.3"
   },
@@ -10,6 +14,10 @@
   },
   "dependencies": {
     "@alpinejs/intersect": "^3.14.0",
+<<<<<<< HEAD
     "alpinejs": "^3.14.1"
+=======
+    "alpinejs": "^3.14.0"
+>>>>>>> 40bc28a7f4f858b2e3b6ac58e485912493f19a83
   }
 }

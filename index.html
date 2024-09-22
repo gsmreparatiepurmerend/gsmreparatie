@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/output.css">
     <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
+    <link rel="icon" type="image/x-icon" href="./images/gsmReparatiePurmerend.ico">
 </head>
+
 <body x-data='{white: true, activeSection: 1}'>
     <nav class="border-b-2 w  border-primary">
         <div class="navbar bg-base-100">
             <a href="index.html">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
                     <div class="w-10 rounded-full">
-                        <img src="https://scontent.fams2-1.fna.fbcdn.net/v/t39.30808-6/316240315_650894773264176_5130082023036109570_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KkCJsnRN06sQ7kNvgH7NtjS&_nc_ht=scontent.fams2-1.fna&oh=00_AYAcYx9NOIM7qWkOkC4v-MmyxjvY0PskXGjLeje9mED5Ig&oe=6652BC38"
-                            alt="logo" />
+                        <img src="./images/gsmReparatiePurmerend.png" alt="logo" />
                     </div>
                 </div>
             </a>
@@ -53,39 +55,38 @@
         ></div>
     </div>
     <div class="sections">
-        <div 
-        x-intersect.half='white = true, activeSection = 1'
-        class="h-screen flex items-center justify-center">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <h1 class="text-5xl font-bold">GSM Reparatie Purmerend</h1>
-                <p class="py-6 font-bold">Voor uw smartphone reparatie, tablet reparatie én Mac</p>
-                <button class="btn btn-primary text-white" onclick="my_modal_1.showModal()">Maak nu een afspraak!</button>
-                <dialog id="my_modal_1" class="modal">
-                    <div class="modal-box">
-                        <h3 class="font-bold text-lg">Welkom bij GSM Reparatie Purmerend!</h3>
-                        <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de
-                            vrijheid van een perfect werkend apparaat.</p>
-                        <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer
-                            zorgeloos van je mobiele apparaten kunt genieten.</p>
-                        <div class="contact-details mt-5">
-                            <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
-                            <p>Email: <u><a
-                                    href="mailto:info@gsmreparatiepurmerend.nl">info@gsmreparatiepurmerend.nl</a></u>
-                            </p>
-                            <p>Telefoon: <u><a href="tel:0628783641">0628783641</a></u> | <u><a
-                                    href="tel:0299700264">0299700264</a></u></p>
+        <div x-intersect.half='white = true, activeSection = 1' class="h-screen flex items-center justify-center">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">GSM Reparatie Purmerend</h1>
+                    <p class="py-6 font-bold">Voor uw smartphone reparatie, tablet reparatie én Mac</p>
+                    <button class="btn btn-primary text-white" onclick="my_modal_1.showModal()">Maak nu een
+                        afspraak!</button>
+                    <dialog id="my_modal_1" class="modal">
+                        <div class="modal-box">
+                            <h3 class="font-bold text-lg">Welkom bij GSM Reparatie Purmerend!</h3>
+                            <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de
+                                vrijheid van een perfect werkend apparaat.</p>
+                            <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer
+                                zorgeloos van je mobiele apparaten kunt genieten.</p>
+                            <div class="contact-details mt-5">
+                                <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
+                                <p>Email: <u><a
+                                            href="mailto:info@gsmreparatiepurmerend.nl">info@gsmreparatiepurmerend.nl</a></u>
+                                </p>
+                                <p>Telefoon: <u><a href="tel:0628783641">0628783641</a></u> | <u><a
+                                            href="tel:0299700264">0299700264</a></u></p>
+                            </div>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <!-- Als er een knop in het formulier staat, zal dit de modal sluiten -->
+                                    <button class="btn btn-primary text-white">X</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="modal-action">
-                            <form method="dialog">
-                                <!-- Als er een knop in het formulier staat, zal dit de modal sluiten -->
-                                <button class="btn btn-primary text-white">X</button>
-                            </form>
-                        </div>
-                    </div>
-                </dialog>
+                    </dialog>
+                </div>
             </div>
-        </div>
         </div>
         <div 
         x-intersect.half='white = false, activeSection = 2'
@@ -182,4 +183,5 @@
     </footer>
     <script src="public/app.js"></script>
 </body>
+
 </html>
