@@ -13,3 +13,13 @@
     z-index: 1001;
     cursor: pointer;
   }
+
+  .message-container {
+   background-color: violet;
+    height: 300px;
+}
+
+#userMessage {
+    height: 300px; /* Stel een vaste hoogte in */
+    overflow-y: auto; /* Zorg voor scrollen als het vol is */
+}

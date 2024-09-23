@@ -30,6 +30,8 @@ sendBtn.addEventListener('click', () => {
       userMessageContainer.innerHTML += `<div class="ai-response">${aiResponseText}</div>`;
   
       userInput.value = '';
+
+      userMessageContainer.scrollTop = userMessageContainer.scrollHeight;
     }
   });
 // Function to generate a new response based on the user's message
@@ -37,15 +39,4 @@ function generateResponse(userInputValue) {
   // TO DO: implement your chatbot's logic to generate a response based on the user's input
   // For now, just return a dummy response
   return `You said: ${userInputValue}`;
-}
-
-
-function updateMessageContainer() {
-    const messageContainer = document.querySelector('.message-container');
-    const messageElements = messageContainer.children;
-    if (messageElements.length > 4) {
-        messageContainer.style.overflowY = 'auto';
-    } else {
-        messageContainer.style.overflowY = 'visible';
-    }
 }
