@@ -1,12 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; // Ensure no extra scrollbar on body
+}
+
 .sections {
-    overflow: auto;
-    height: 100vh;
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-  
-    > div {
-      scroll-snap-align: start;
-    }
+  overflow: auto;
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  > div {
+    scroll-snap-align: start;
   }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

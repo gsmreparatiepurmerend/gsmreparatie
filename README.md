@@ -25,12 +25,22 @@ Volg de onderstaande stappen om het project lokaal te draaien:
 git clone https://github.com/gsmreparatiepurmerend/gsmreparatie.git
 
 Navigeer naar de projectmap:
-cd cd gsmreparatie
+cd gsmreparatie
 
 
 Installeer de benodigde dependencies:
+BUN:
 bun install
 
+NPM:
+npm install
+
 Start alpine en tailwindcss with:
+
+BUN:
 bun run build-css 
 bun run build-js
+
+NPM:
+npm run build-css
+npm run build-js
