@@ -25,7 +25,7 @@ Volg de onderstaande stappen om het project lokaal te draaien:
 git clone https://github.com/gsmreparatiepurmerend/gsmreparatie.git
 
 Navigeer naar de projectmap:
-cd cd gsmreparatie
+cd gsmreparatie
 
 
 Installeer de benodigde dependencies:
