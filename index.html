@@ -50,29 +50,22 @@
         <div class='w-3 h-3 rounded-full border-2' :class="{'border-black' : white, 'bg-white' : activeSection == 2}">
         </div>
     </div>
-      <!-- Chat Bubble Icon -->
+
   <div class="chat-bubble-icon" x-data="{ open: false }">
     <button @click="open = !open" class="btn btn-circle bg-blue-500 text-white shadow-lg text-lg" style="font-size: 32px;">
         💬
     </button>
-    <!-- Chat Box -->
     <div x-show="open" @click.away="open = false" class="chat-box bg-white rounded-lg shadow-lg p-4" x-cloak style="color: black;">
         <h1>Welkom bij chatbox hoe kan ik je helpen</h1>
-    
-        <!-- Message container -->
+
         <div class="message-container" style="max-height: 200px; overflow-y: auto;">
-            <!-- Your message -->
             <div class="my-message" id="userMessage">
             </div>
     
-            <!-- AI response -->
             <div class="ai-response" id="ai-response">
             </div>
-    
-            <!-- Add more message elements here -->
         </div>
     
-        <!-- User Input -->
         <div class="mt-4" style="color: white;">
             <input type="text" class="input input-bordered w-full" placeholder="Type your message..." id="user-input" />
             <button class="btn btn-primary" id="send-btn">Send</button>
@@ -94,7 +87,8 @@
                             <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de
                                 vrijheid van een perfect werkend apparaat.</p>
                             <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer
-                                zorgeloos van je mobiele apparaten kunt genieten.</p>
+                                zor
+                                geloos van je mobiele apparaten kunt genieten.</p>
                             <div class="contact-details mt-5">
                                 <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
                                 <p>Email: <u><a
