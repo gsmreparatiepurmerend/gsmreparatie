@@ -1,0 +1,15 @@
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 300px;
+  }
+
+  .chat-bubble-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+  }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/output.css">
+    <link rel="stylesheet" href="chat bot/bot.css">
     <link rel="stylesheet" type="text/css" href="fullpage.css" />
     <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
     <link rel="icon" type="image/x-icon" href="./images/gsmReparatiePurmerend.ico">
@@ -61,6 +62,36 @@
         <div class='w-3 h-3 rounded-full border-2' :class="{'border-black' : white, 'bg-white' : activeSection == 2}">
         </div>
     </div>
+      <!-- Chat Bubble Icon -->
+  <div class="chat-bubble-icon" x-data="{ open: false }">
+    <button @click="open = !open" class="btn btn-circle bg-blue-500 text-white shadow-lg text-lg" style="font-size: 32px;">
+        💬
+    </button>
+    <!-- Chat Box -->
+    <div x-show="open" @click.away="open = false" class="chat-box bg-white rounded-lg shadow-lg p-4" x-cloak style="color: black;">
+        <h1>Welkom bij chatbox hoe kan ik je helpen</h1>
+    
+        <!-- Message container -->
+        <div class="message-container" style="max-height: 200px; overflow-y: auto;">
+            <!-- Your message -->
+            <div class="my-message" id="userMessage">
+            </div>
+    
+            <!-- AI response -->
+            <div class="ai-response" id="ai-response">
+            </div>
+    
+            <!-- Add more message elements here -->
+        </div>
+    
+        <!-- User Input -->
+        <div class="mt-4" style="color: white;">
+            <input type="text" class="input input-bordered w-full" placeholder="Type your message..." id="user-input" />
+            <button class="btn btn-primary" id="send-btn">Send</button>
+        </div>
+    </div>
+    </div>
+
     <div class="sections">
         <div x-intersect.half='white = true, activeSection = 1' class="h-screen flex items-center justify-center">
             <div class="hero-content text-center">
@@ -183,6 +214,7 @@
         </nav>
     </footer>
     <script src="public/app.js"></script>
+    <script src="chat bot/bot.js"></script>
 </body>
 
 </html>
