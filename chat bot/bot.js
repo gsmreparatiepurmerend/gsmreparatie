@@ -8,6 +8,12 @@ const userMessageContainer = document.querySelector('#userMessage');
 // Store the user's messages in an array
 let userMessages = [];
 
+userInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      sendBtn.click();
+    }
+  });
+  
 sendBtn.addEventListener('click', () => {
     const userInputValue = userInput.value.trim();
     if (userInputValue !== '') {
