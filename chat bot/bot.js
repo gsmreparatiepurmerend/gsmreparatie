@@ -8,29 +8,37 @@ let userMessages = [];
 
 userInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-      sendBtn.click();
+        sendBtn.click();
     }
-  });
-  
+});
+
 sendBtn.addEventListener('click', () => {
     const userInputValue = userInput.value.trim();
     if (userInputValue !== '') {
-      userMessages.push(userInputValue);
-  
-      userMessageContainer.innerHTML += `<div class="my-message">${userInputValue}</div>`;
-  
-      const aiResponseText = generateResponse(userInputValue);
-  
-      userMessageContainer.innerHTML += `<div class="ai-response">${aiResponseText}</div>`;
-  
-      userInput.value = '';
+        userMessages.push(userInputValue);
 
-      userMessageContainer.scrollTop = userMessageContainer.scrollHeight;
+        userMessageContainer.innerHTML += ` <div class="bubble right">${userInputValue}</div> </br>`;
+
+        const aiResponseText = generateResponse(userInputValue);
+
+        userMessageContainer.innerHTML += ` <div class="row"><div class="chat-image avatar">
+  <div class="w-11 rounded-full">
+    <img
+      alt="bot"
+      src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTHsK1ZoItA_jI8Qsh_g-KScUGYtHjh5MqFuQGjFQAXyKD8UYneQToPyqYOgGzQWnbl"
+    />
+  </div>
+</div>
+<div class="bubble left">${aiResponseText}</div></div></br>`;
+
+        userInput.value = '';
+
+        userMessageContainer.scrollTop = userMessageContainer.scrollHeight;
     }
-  });
-  
+});
+
 function generateResponse(userInputValue) {
-  // TO DO: implement your chatbot's logic to generate a response based on the user's input
-  // For now, just return a dummy response
-  return `You said: ${userInputValue}`;
+    // TO DO: implement your chatbot's logic to generate a response based on the user's input
+    // For now, just return a dummy response
+    return `You said: ${userInputValue}`;
 }
