@@ -51,6 +51,7 @@
 }
 
 .left {
+    background: linear-gradient(135deg, #ff00fb,#0015fe ) border-box;
     --_p: 0;
     border-bottom-left-radius: 0 0;
     place-self: start;
