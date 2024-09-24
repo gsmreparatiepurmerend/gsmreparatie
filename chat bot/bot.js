@@ -17,19 +17,45 @@ sendBtn.addEventListener('click', () => {
     if (userInputValue !== '') {
         userMessages.push(userInputValue);
 
-        userMessageContainer.innerHTML += ` <div class="bubble right">${userInputValue}</div> </br>`;
+        userMessageContainer.innerHTML += `
+          <div class="chat chat-end">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  alt="User"
+                  src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTHsK1ZoItA_jI8Qsh_g-KScUGYtHjh5MqFuQGjFQAXyKD8UYneQToPyqYOgGzQWnbl"
+                />
+              </div>
+            </div>
+            <div class="chat-header">
+              User
+              <time class="text-xs opacity-50">${new Date().toLocaleTimeString()}</time>
+            </div>
+            <div class="chat-bubble">${userInputValue}</div>
+            <div class="chat-footer opacity-50">Delivered</div>
+          </div>
+        `;
 
         const aiResponseText = generateResponse(userInputValue);
 
-        userMessageContainer.innerHTML += ` <div class="row"><div class="chat-image avatar">
-  <div class="w-11 rounded-full">
-    <img
-      alt="bot"
-      src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTHsK1ZoItA_jI8Qsh_g-KScUGYtHjh5MqFuQGjFQAXyKD8UYneQToPyqYOgGzQWnbl"
-    />
-  </div>
-</div>
-<div class="bubble left">${aiResponseText}</div></div></br>`;
+        userMessageContainer.innerHTML += `
+          <div class="chat chat-start">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  alt="AI"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <div class="chat-header">
+              AI
+              <time class="text-xs opacity-50">${new Date().toLocaleTimeString()}</time>
+            </div>
+            <div class="chat-bubble">${aiResponseText}</div>
+            <div class="chat-footer opacity-50">Seen at ${new Date().toLocaleTimeString()}</div>
+          </div>
+        `;
 
         userInput.value = '';
 
