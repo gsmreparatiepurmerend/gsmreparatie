@@ -902,6 +902,7 @@ html {
   padding-bottom: 0.25rem;
 }
 
+<<<<<<< HEAD
 .chat-image {
   grid-row: span 2 / span 2;
   align-self: flex-end;
@@ -1019,6 +1020,8 @@ html {
           mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");
 }
 
+=======
+>>>>>>> f9ff67b (.)
 .checkbox {
   flex-shrink: 0;
   --chkbg: var(--fallback-bc,oklch(var(--bc)/1));
@@ -2097,6 +2100,10 @@ html {
   position: fixed;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -2291,6 +2298,10 @@ html {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-40 {
+  padding: 10rem;
 }
 
 .px-10 {
