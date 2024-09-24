@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/output.css">
-    <link rel="stylesheet" href="chat bot/bot.css">
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
     <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
     <link rel="icon" type="image/x-icon" href="./images/gsmReparatiePurmerend.ico">
 </head>
 
 <body x-data='{white: true, activeSection: 1}'>
-    <nav class="border-b-2 w  border-primary">
+    <nav style="position: sticky; top: 0px;">
         <div class="navbar bg-base-100">
             <a href="index.html">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
@@ -37,12 +37,23 @@
             </div>
             <div>
                 <label class="cursor-pointer grid place-items-center mx-7">
-                    <input type="checkbox" value="acid" class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"/>
-                    <svg class="col-start-1 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    <svg class="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-                  </label>
+                    <input type="checkbox" value="acid"
+                        class="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+                    <svg class="col-start-1 row-start-1 stroke-base-100 fill-base-100"
+                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="col-start-2 row-start-1 stroke-base-100 fill-base-100"
+                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                        </svg>
+                </label>
             </div>
-            </div>
+        </div>
     </nav>
     <div class="fixed flex flex-col justify-center h-screen space-y-4 px-10">
         <div class='w-3 h-3 rounded-full border-2' :class="{'border-black' : white, 'bg-black' : activeSection == 1}">
@@ -50,29 +61,6 @@
         <div class='w-3 h-3 rounded-full border-2' :class="{'border-black' : white, 'bg-white' : activeSection == 2}">
         </div>
     </div>
-
-  <div class="chat-bubble-icon" x-data="{ open: false }">
-    <button @click="open = !open" class="btn btn-circle bg-blue-500 text-white shadow-lg text-lg" style="font-size: 32px;">
-        💬
-    </button>
-    <div x-show="open" @click.away="open = false" class="chat-box bg-white rounded-lg shadow-lg p-4" x-cloak style="background-color: #003546; color: rgb(255, 255, 255);">
-        <h1>Welkom bij chatbox hoe kan ik je helpen</h1>
-
-        <div class="message-container" style="max-height: 300px; color: rgb(0, 0, 0);">
-            <div class="my-message" id="userMessage">
-            </div>
-    
-            <div class="ai-response" id="ai-response">
-            </div>
-        </div>
-    
-        <div class="mt-4" style="color: white;">
-            <input type="text" class="input input-bordered w-full" placeholder="Type your message..." id="user-input" />
-            <button class="btn btn-primary" id="send-btn">Send</button>
-        </div>
-    </div>
-    </div>
-
     <div class="sections">
         <div x-intersect.half='white = true, activeSection = 1' class="h-screen flex items-center justify-center">
             <div class="hero-content text-center">
@@ -87,8 +75,7 @@
                             <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de
                                 vrijheid van een perfect werkend apparaat.</p>
                             <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer
-                                zor
-                                geloos van je mobiele apparaten kunt genieten.</p>
+                                zorgeloos van je mobiele apparaten kunt genieten.</p>
                             <div class="contact-details mt-5">
                                 <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
                                 <p>Email: <u><a
@@ -108,37 +95,33 @@
                 </div>
             </div>
         </div>
-        <div 
-        x-intersect.half='white = false, activeSection = 2'
-        class="h-screen flex items-center justify-center bg-primary"
-        >
-        <div>
-            <div class="mockup-phone">
-                <div class="camera"></div>
-                <div class="display">
-                    <div class="artboard artboard-demo phone-1">
-                        <h2>WIJ ZIJN OPEN OP</h2>
-                        <div class="flex flex-col mt-12">
-                            <ul>
-                                <li>Ma 10:00 - 18:00</li>
-                                <li>Di 10:00 - 18:00</li>
-                                <li>Wo 10:00 - 18:00</li>
-                                <li>Do 10:00 - 18:00</li>
-                                <li>Vr 10:00 - 18:00</li>
-                                <li>Za 10:00 - 18:00</li>
-                            </ul>
+        <div x-intersect.half='white = false, activeSection = 2' class="test flex items-center justify-center"
+            id="test">
+            <div>
+                <div class="mockup-phone">
+                    <div class="camera"></div>
+                    <div class="display">
+                        <div class="artboard artboard-demo phone-1">
+                            <h2>WIJ ZIJN OPEN OP</h2>
+                            <div class="flex flex-col mt-12">
+                                <ul>
+                                    <li>Ma 10:00 - 18:00</li>
+                                    <li>Di 10:00 - 18:00</li>
+                                    <li>Wo 10:00 - 18:00</li>
+                                    <li>Do 10:00 - 18:00</li>
+                                    <li>Vr 10:00 - 18:00</li>
+                                    <li>Za 10:00 - 18:00</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        <div 
-        x-intersect.half='white = false, activeSection = 3'
-        class="h-screen flex items-center justify-center"
-        >
-        <div class="flex justify-center items-center mb-20">
-            <div class="stats stats-vertical lg:stats-horizontal shadow bg-neutral">
+    </div>
+    <!-- <section class="p-40">
+        <div class="flex justify-center items-center">
+            <div class="stats stats-vertical lg:stats-horizontal shadow">
 
                 <div class="stat">
                     <div class="stat-title">Ondersteunende modellen</div>
@@ -160,9 +143,7 @@
                     <div class="stat-value">2427</div>
                 </div>
             </div>
-        </div>
-        </div>
-    </div>
+    </section> -->
     <footer class="footer p-10 bg-primary text-primary-content">
         <nav>
             <h6 class="footer-title">Services</h6>
@@ -202,7 +183,6 @@
         </nav>
     </footer>
     <script src="public/app.js"></script>
-    <script src="chat bot/bot.js"></script>
 </body>
 
 </html>
