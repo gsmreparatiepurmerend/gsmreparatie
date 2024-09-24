@@ -15,7 +15,7 @@
 }
 
 .message-container {
-    background-color: violet;
+    background-color: var(--fallback-p, oklch(var(--p) / var(--tw-bg-opacity))) ;
     height: 300px;
 }
 
@@ -37,9 +37,7 @@
 
 .bubble {
     --r: 1em;
-    /* the radius */
     --t: 1.5em;
-    /* the size of the tail */
 
     max-width: 300px;
     padding: 1em;
