@@ -1967,10 +1967,6 @@ html {
   position: fixed;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1992,16 +1988,16 @@ html {
   margin-right: 1.75rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .flex {
@@ -2111,6 +2107,11 @@ html {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-neutral {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
@@ -2121,9 +2122,9 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-neutral {
+.bg-secondary {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
+  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
 }
 
 .fill-base-100 {
@@ -2140,10 +2141,6 @@ html {
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-40 {
-  padding: 10rem;
 }
 
 .p-5 {
