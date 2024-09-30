@@ -27,20 +27,18 @@ git clone https://github.com/gsmreparatiepurmerend/gsmreparatie.git
 Navigeer naar de projectmap:
 cd gsmreparatie
 
-
+# with Bun
 Installeer de benodigde dependencies:
-BUN:
-bun install
-
-NPM:
-npm install
+ * bun install
 
 Start alpine en tailwindcss with:
+* bun run build-css 
+* bun run build-js
+* 
+# with NPM
+Installeer de benodigde dependencies:
+* npm install
 
-BUN:
-bun run build-css 
-bun run build-js
-
-NPM:
-npm run build-css
-npm run build-js
+Start alpine en tailwindcss with:
+* npm run build-css
+* npm run build-js
