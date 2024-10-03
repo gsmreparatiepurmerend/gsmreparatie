@@ -9,7 +9,7 @@
     "build-js": "esbuild src/app.js --outfile=public/app.js --bundle --watch"
   },
   "dependencies": {
-    "@alpinejs/intersect": "^3.14.0",
+    "@alpinejs/intersect": "^3.14.1",
     "alpinejs": "^3.14.1",
     "braces": "^3.0.3",
     "caniuse-lite": "^1.0.30001663"
