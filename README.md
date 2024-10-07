@@ -34,7 +34,7 @@ Installeer de benodigde dependencies:
 Start alpine en tailwindcss with:
 * bun run build-css 
 * bun run build-js
-* 
+
 # with NPM
 Installeer de benodigde dependencies:
 * npm install
