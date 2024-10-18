@@ -1,3 +1,11 @@
+.card{
+    background-color:#a8e707;
+}
+
+.card-body{
+    color: black;
+}
+
 .flip-container {
     perspective: 1000px;
     width: 100%;
