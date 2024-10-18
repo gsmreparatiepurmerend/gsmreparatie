@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onder Constructie</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/output.css">
+    <style>
+        .moving-man {
+            position: absolute;
+            top: 50%;
+            right: -150px;
+            width: 750px;
+            animation: moveAcross 24s linear infinite;
+        }
+
+        @keyframes moveAcross {
+            0% {
+                right: -150px;
+            }
+
+            100% {
+                right: 100%;
+            }
+        }
+
+        .text-3d {
+            position: relative;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+            transform: perspective(500px) rotateX(10deg) translateZ(30px);
+            animation: dropText 5s ease-in-out forwards;
+        }
+
+        @keyframes dropText {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body x-data='{white: true, activeSection: 1}' style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            text-align: center;">
+    <div class="container mx-auto text-center">
+        <div class="relative">
+            <img src="/images/output-onlinegiftools.gif" alt="man walking" class="moving-man">
+
+            <h1 class="text-3d" x-data="{ show: false }" x-init="setTimeout(() => show = true, 1000)">
+              op dit moment zitten we in onderhoud.
+            </h1>
+        </div>
+    </div>
+</body>
+
+</html>
