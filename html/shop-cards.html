@@ -47,16 +47,16 @@
         <div class="row flex justify-center gap-6 p-2 mb-6">
           <template x-for="card in Array.from({length: cardsPerRow}).map((_, i) => (row - 1) * cardsPerRow + i + 1)" :key="card" x-if="card <= cards">
             <div class="flex items-center justify-center flex-1 space-x-6 p-2">
-              <div class="card bg-base-100 w-96 shadow-xl">
+              <div class="card w-96 shadow-xl">
                 <div class="flip-container">
                   <div class="flip-card">
-                    <figure class="front px-10 pt-10 img-container">
+                    <figure class="front px-5 pt-5 img-container">
                       <img
                         src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                         alt="Shoes"
                         class="rounded-xl" />
                     </figure>
-                    <figure class="back px-10 pt-10 img-container">
+                    <figure class="back px-5 pt-5 img-container">
                       <img
                         src="https://img.daisyui.com/images/stock/photo-1521747116042-5a810fda9664.webp"
                         alt="Shoes Back"
