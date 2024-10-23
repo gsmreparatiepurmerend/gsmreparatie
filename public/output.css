@@ -2139,6 +2139,26 @@ html {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -2160,16 +2180,16 @@ html {
   margin-right: 1.75rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
 .mb-20 {
   margin-bottom: 5rem;
 }
 
 .mt-12 {
   margin-top: 3rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -2188,12 +2208,12 @@ html {
   height: 100vh;
 }
 
-.w-3 {
-  width: 0.75rem;
-}
-
 .w-10 {
   width: 2.5rem;
+}
+
+.w-3 {
+  width: 0.75rem;
 }
 
 .max-w-md {
@@ -2246,17 +2266,16 @@ html {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border-2 {
   border-width: 2px;
 }
 
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .border-black {
@@ -2267,11 +2286,6 @@ html {
 .border-primary {
   --tw-border-opacity: 1;
   border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity)));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-base-100 {
@@ -2292,6 +2306,51 @@ html {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
+.bg-\[url\(\'\/path\/to\/your\/image\.jpg\'\)\] {
+  background-image: url('/path/to/your/image.jpg');
+}
+
+.bg-\[url\(\'\/\'\)\] {
+  background-image: url('/');
+}
+
+.bg-\[url\(\'\/images\'\)\] {
+  background-image: url('/images');
+}
+
+.bg-\[url\(\'\/images\/\'\)\] {
+  background-image: url('/images/');
+}
+
+.bg-\[url\(\'\/images\/repairman-s-workplace-with-cell-phone-special-tools-desk\.jpg\'\)\] {
+  background-image: url('/images/repairman-s-workplace-with-cell-phone-special-tools-desk.jpg');
+}
+
+.bg-\[url\(\'\/images\/tones\.jpg\'\)\] {
+  background-image: url('/images/tones.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .fill-base-100 {
@@ -2347,14 +2406,18 @@ html {
   font-weight: 700;
 }
 
+.text-primary-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-primary-content {
-  --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow {
