@@ -71,9 +71,9 @@
                   
                   <div class="card-actions">
                     <button class="btn btn-primary">Buy Now</button>
-                    <button class="btn btn-primary w-full" @click="showGif = true; setTimeout(() => { showGif = false; openModal = true }, 1400)">
+                    <button class="btn btn-primary w-full" @click="showGif = true; setTimeout(() => { showGif = false; setTimeout(() => { openModal = true; }, 150); }, 3100)">
                         Open Accessoire Case
-                      </button>
+                    </button>
                   </div>
 
                   <div x-show="openModal" class="modal modal-open fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" @click.away="openModal = false">
@@ -94,7 +94,7 @@
     </div>
 </div>
                   
-<div x-show="showGif" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80" style="z-index: 1000 !important;">
+<div x-show="showGif" :class="showGif ? 'fade-in' : 'fade-out'" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80" style="z-index: 1000 !important;">
     <img src="/images/2 deur.gif" alt="2 Deur Animatie" class="showgif" />
 </div>
 
