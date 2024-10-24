@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/public/output.css">
     <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
 </head>
-<body x-data='{white: true, activeSection: 1}' class="min-h-screen flex flex-col" style="overflow: scroll-smooth;">
+<body x-data='{white: true, activeSection: 1, openModal: false, showGif: false}' class="min-h-screen flex flex-col" style="overflow: scroll-smooth;">
 <nav class="border-b-2 w  border-primary">
     <div class="navbar bg-base-100">
         <a href="/index.html">
@@ -41,13 +41,13 @@
         </div>
     </div>
 </nav>
-<div x-data="{ cards: 10, cardsPerRow: 5 }">
+<div x-data="{ cards: 10, cardsPerRow: 5}"> 
     <div class="col w-full">
       <template x-for="row in Math.ceil(cards / cardsPerRow)" :key="row">
         <div class="row flex justify-center gap-6 p-2 mb-6">
           <template x-for="card in Array.from({length: cardsPerRow}).map((_, i) => (row - 1) * cardsPerRow + i + 1)" :key="card" x-if="card <= cards">
             <div class="flex items-center justify-center flex-1 space-x-6 p-2">
-              <div class="card w-96 shadow-xl">
+              <div class="card w-96 shadow-xl" x-data="{ openModal: false }">
                 <div class="flip-container">
                   <div class="flip-card">
                     <figure class="front px-5 pt-5 img-container">
@@ -64,11 +64,26 @@
                     </figure>
                   </div>
                 </div>
+
                 <div class="card-body items-center text-center">
                   <h2 class="card-title">Shoes!</h2>
                   <p>If a dog chews shoes whose shoes does he choose?</p>
+                  
                   <div class="card-actions">
                     <button class="btn btn-primary">Buy Now</button>
+                    <button class="btn btn-primary w-full" @click="showGif = true; setTimeout(() => { showGif = false; openModal = true }, 1400)">
+                        Open Accessoire Case
+                      </button>
+                  </div>
+
+                  <div x-show="openModal" class="modal modal-open fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" @click.away="openModal = false">
+                    <div class="modals-box">
+                      <h3 class="font-bold text-lg">Inside the Case</h3>
+                      <p class="py-4">Extra storage for accessories, cards, or small notes.</p>
+                      <div class="modal-action">
+                        <button class="btn btn-primary" @click="openModal = false">Close Accessoire Case</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -77,7 +92,12 @@
         </div>
       </template>
     </div>
-  </div>  
+</div>
+                  
+<div x-show="showGif" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80" style="z-index: 1000 !important;">
+    <img src="/images/2 deur.gif" alt="2 Deur Animatie" class="showgif" />
+</div>
+
 <footer class="footer p-10 bg-primary text-primary-content">
     <nav>
         <h6 class="footer-title">Services</h6>
