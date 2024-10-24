@@ -15,6 +15,9 @@
 <body x-data="{ navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }" x-init="loadContent()">
 
     <div x-html="navContent"></div>
+
+    <h1 class="text-5xl font-bold">iPad</h1>
+
     <div x-html="faqContent"></div>
     <div x-html="footerContent"></div>
 
