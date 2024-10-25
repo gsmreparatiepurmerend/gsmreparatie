@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/public/output.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-        <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/output.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
     <link rel="icon" type="image/x-icon" href="/images/gsmReparatiePurmerend.ico">
 </head>
 
 <body
-x-data="{ navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }"
-x-init="loadContent()">
+    x-data="{ navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }"
+    x-init="loadContent()">
 
-<div x-html="navContent"></div>
+    <div x-html="navContent"></div>
 
-<h1 class="text-5xl font-bold text-center">Samsung</h1>
-vanaf s22
-vanaf a15
+    <h1 class="text-5xl font-bold text-center">Samsung</h1>
+    vanaf s22
+    vanaf a15
 
-<div class="text-center grid justify-items-center grid-cols-5 mt-8">
+    <div class="text-center grid justify-items-center grid-cols-5 mt-8">
         <div class="card bg-base-100 w-72 shadow-xl" role="button">
-            <a href="/pages/samsung.html">
+            <a href="/pages/samsung/galaxy-s22.html">
                 <figure>
                     <img src="/images/Samsung.png" alt="Samsung" />
                 </figure>
@@ -33,9 +33,9 @@ vanaf a15
             </a>
         </div>
         <div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/iphone.html">
+            <a href="/pages/samsung/galaxy-s22+.html">
                 <figure>
-                    <img src="/images/iphone.png" alt="iPhone" />
+                    <img src="/images/Samsung.png" alt="iPhone" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S22+</h2>
@@ -43,9 +43,9 @@ vanaf a15
             </a>
         </div>
         <div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/tablet.html">
+            <a href="/pages/samsung/galaxy-s22-ultra.html">
                 <figure>
-                    <img src="/images/tablet.png" alt="Tablet" />
+                    <img src="/images/Samsung.png" alt="Tablet" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S22 Ultra</h2>
@@ -53,57 +53,122 @@ vanaf a15
             </a>
         </div>
         <div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+            <a href="/pages/samsung/galaxy-s23.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S23</h2>
                 </div>
             </a>
-        </div><div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-s23+.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S23+</h2>
                 </div>
             </a>
-        </div><div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-s23-ultra.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S23 Ultra</h2>
                 </div>
             </a>
-        </div><div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-s24.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S24</h2>
                 </div>
             </a>
-        </div><div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-s24+.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S24+</h2>
                 </div>
             </a>
-        </div><div class="card bg-base-100 w-72 shadow-xl">
-            <a href="/pages/ipad.html">
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-s24-ultra.html">
                 <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
+                    <img src="/images/Samsung.png" alt="iPad" />
                 </figure>
                 <div class="card-body">
                     <h2 class="card-title">Samsung Galaxy S24 Ultra</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a15.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A15</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a15-5g.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A15 5G</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a16-5g.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A16 5G</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a25-5g.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A25 5G</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a35-5g.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A35 5G</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-72 shadow-xl">
+            <a href="/pages/samsung/galaxy-a55-5g.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Samsung Galaxy A55 5G</h2>
                 </div>
             </a>
         </div>
