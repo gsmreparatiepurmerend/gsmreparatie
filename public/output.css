@@ -1616,6 +1616,48 @@ html {
   height: auto;
 }
 
+.swap {
+  position: relative;
+  display: inline-grid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  place-content: center;
+  cursor: pointer;
+}
+
+.swap > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: transform, opacity;
+}
+
+.swap input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.swap .swap-on,
+.swap .swap-indeterminate,
+.swap input:indeterminate ~ .swap-on {
+  opacity: 0;
+}
+
+.swap input:checked ~ .swap-off,
+.swap-active .swap-off,
+.swap input:indeterminate ~ .swap-off {
+  opacity: 0;
+}
+
+.swap input:checked ~ .swap-on,
+.swap-active .swap-on,
+.swap input:indeterminate ~ .swap-indeterminate {
+  opacity: 1;
+}
+
 .tabs {
   display: grid;
   align-items: flex-end;
@@ -2403,6 +2445,49 @@ details.collapse summary::-webkit-details-marker {
   }
 }
 
+.swap-rotate .swap-on,
+.swap-rotate .swap-indeterminate,
+.swap-rotate input:indeterminate ~ .swap-on {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.swap-rotate input:checked ~ .swap-off,
+.swap-active:where(.swap-rotate) .swap-off,
+.swap-rotate input:indeterminate ~ .swap-off {
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.swap-rotate input:checked ~ .swap-on,
+.swap-active:where(.swap-rotate) .swap-on,
+.swap-rotate input:indeterminate ~ .swap-indeterminate {
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.swap-flip .swap-on,
+.swap-flip .swap-indeterminate,
+.swap-flip input:indeterminate ~ .swap-on {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+.swap-flip input:checked ~ .swap-off,
+.swap-active:where(.swap-flip) .swap-off,
+.swap-flip input:indeterminate ~ .swap-off {
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+.swap-flip input:checked ~ .swap-on,
+.swap-active:where(.swap-flip) .swap-on,
+.swap-flip input:indeterminate ~ .swap-indeterminate {
+  transform: rotateY(0deg);
+}
+
 .table tr.active,
   .table tr.active:nth-child(even),
   .table-zebra tbody tr:nth-child(even) {
@@ -2718,10 +2803,6 @@ details.collapse summary::-webkit-details-marker {
   margin: 0.25rem;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
 .mx-7 {
   margin-left: 1.75rem;
   margin-right: 1.75rem;
@@ -2729,6 +2810,10 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .inline {
@@ -2755,6 +2840,10 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -2769,6 +2858,14 @@ details.collapse summary::-webkit-details-marker {
 
 .w-96 {
   width: 24rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .min-w-full {
@@ -2791,12 +2888,20 @@ details.collapse summary::-webkit-details-marker {
   cursor: pointer;
 }
 
+.auto-cols-max {
+  grid-auto-columns: max-content;
+}
+
 .grid-flow-col {
   grid-auto-flow: column;
 }
 
-.flex-row {
-  flex-direction: row;
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2819,8 +2924,28 @@ details.collapse summary::-webkit-details-marker {
   justify-content: center;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -2897,10 +3022,6 @@ details.collapse summary::-webkit-details-marker {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .p-6 {
