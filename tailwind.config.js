@@ -15,7 +15,7 @@ module.exports = {
   ],
   daisyui: {
     themes: [ 
-   'synthwave', 'acid'
+   'synthwave', 'garden'
   ],
   },
 }
