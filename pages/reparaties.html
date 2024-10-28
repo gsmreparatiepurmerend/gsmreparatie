@@ -11,11 +11,56 @@
     <link rel="icon" type="image/x-icon" href="/images/gsmReparatiePurmerend.ico">
 </head>
 
-<body x-data="{ navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }" x-init="loadContent()">
+<body
+    x-data="{ navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }"
+    x-init="loadContent()">
 
     <div x-html="navContent"></div>
 
-    <h1 class="text-5xl font-bold">Reparaties</h1>
+    <h1 class="text-5xl font-bold text-center">Reparaties</h1>
+
+    <div class="text-center grid justify-items-center grid-cols-4 mt-8">
+        <div class="card bg-base-100 w-52 shadow-xl" role="button">
+            <a href="/pages/samsung.html">
+                <figure>
+                    <img src="/images/Samsung.png" alt="Samsung" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title ">Samsung</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-52 shadow-xl">
+            <a href="/pages/iphone.html">
+                <figure>
+                    <img src="/images/iphone.png" alt="iPhone" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">iPhone</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-52 shadow-xl">
+            <a href="/pages/tablet.html">
+                <figure>
+                    <img src="/images/tablet.png" alt="Tablet" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Tablet</h2>
+                </div>
+            </a>
+        </div>
+        <div class="card bg-base-100 w-52 shadow-xl">
+            <a href="/pages/ipad.html">
+                <figure>
+                    <img src="/images/ipad.png" alt="iPad" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">iPad</h2>
+                </div>
+            </a>
+        </div>
+    </div>
 
     <div x-html="faqContent"></div>
     <div x-html="footerContent"></div>
