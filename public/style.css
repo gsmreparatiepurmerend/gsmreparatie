@@ -26,10 +26,25 @@ html, body {
 }
 
 @layer utilities {
+  @keyframes fadeDownIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeDownIn {
+    animation: fadeDownIn 1s;
+  }
+}
+@layer utilities {
   @keyframes fadeInUp {
     0% {
       opacity: 0;
-      transform: translateY(50%);
+      transform: translateY(100%);
     }
     100% {
       opacity: 1;

@@ -70,23 +70,26 @@
                         <!--Ik heb met intersect een animatie voor te text geimplementeerd-->
                         <h1
                             class="text-5xl font-bold"
-                            x-intersect="$el.classList.add('fadeInUp')"
+                            x-intersect="$el.classList.add('fadeDownIn')"
                         >
                             GSM Reparatie Purmerend
                         </h1>
                         <p
                             class="py-6 font-bold"
-                            x-intersect="$el.classList.add('fadeInUp')"
+                            x-intersect="$el.classList.add('fadeDownIn')"
                         >
                             Voor uw smartphone reparatie, tablet reparatie én
                             Mac
                         </p>
-                        <button
+                        <div  x-intersect="$el.classList.add('fadeInUp')">
+                            <button
                             class="btn btn-primary text-white"
                             onclick="my_modal_1.showModal()"
                         >
                             Maak nu een afspraak!
                         </button>
+                        </div>
+
                         <dialog id="my_modal_1" class="modal">
                             <div class="modal-box">
                                 <h3 class="font-bold text-lg">
@@ -149,13 +152,20 @@
             <!--Section 2 begint hier-->
             <div
                 x-intersect.half="white = false, activeSection = 2"
-                class="h-98 flex items-center justify-center bg-primary"
+                class="h-screen flex items-center justify-start bg-primary "
             >
+            <div>
                 <img
-                    x-intersect="$el.classList.add('scale')"
-                    src="images/openingstijden.png"
-                    alt="openingstijden"
-                />
+                x-intersect="$el.classList.add('scale')"
+                src="images/openingstijden.png"
+                alt="openingstijden"
+            />
+            </div>
+            <div class="">
+                <h2 x-intersect="$el.classList.add('fadeInUp')">Openingstijden van onze GSM Reparatiewinkel in Purmerend</h2>
+                <p x-intersect="$el.classList.add('fadeInUp')">Onze winkel is geopend van maandag tot en met zaterdag, zodat u altijd bij ons terecht kunt voor al uw telefoonreparaties en -accessoires. Kom langs voor deskundig advies en snelle service! Bekijk hieronder onze specifieke openingstijden:</p>
+            </div>
+
             </div>
             <!--Section 2 eindigt hier-->
             <!--Section 3 begint hier-->
@@ -163,7 +173,7 @@
                 x-intersect.half="white = false, activeSection = 3"
                 class="h-screen flex items-center justify-center"
             >
-                <div class="flex justify-center items-center mb-20">
+                <div class="flex justify-center items-center mb-20 border-dotted border-4">
                     <div
                         class="stats stats-vertical lg:stats-horizontal shadow bg-neutral"
                     >
@@ -270,7 +280,7 @@
             </div>
             <div
                 x-intersect.half="white = false, activeSection = 4"
-                class="h-screen flex items-center justify-center bg-primary"
+                class="h-screen flex items-center justify-center bg-primary mb-2"
             >
                 <div x-html="faqContent"></div>
             </div>
