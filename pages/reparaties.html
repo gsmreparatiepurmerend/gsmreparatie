@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" xmlns:x-intersect="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
     <link rel="stylesheet" href="/public/output.css">
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -17,51 +18,62 @@
 
     <div x-html="navContent"></div>
 
-    <h1 class="text-5xl font-bold text-center">Reparaties</h1>
+    <div x-intersect="$el.classList.add('fadeInUp','m-5','p-7')">
+        <h1 class="text-5xl font-bold text-center">Reparaties</h1>
+    </div>
+    
 
-    <div class="text-center grid justify-items-center grid-cols-4 mt-8">
-        <div class="card bg-base-100 w-52 shadow-xl" role="button">
-            <a href="/pages/samsung.html">
-                <figure>
-                    <img src="/images/Samsung.png" alt="Samsung" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title ">Samsung</h2>
-                </div>
-            </a>
+    <!-- Responsive Grid Container -->
+    <div class="text-center grid justify-items-center gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8">
+        <div x-intersect="$el.classList.add('scale2')">
+            <div class="card bg-base-100 w-52 shadow-xl" role="button">
+                <a href="/pages/samsung.html">
+                    <figure>
+                        <img src="/images/Samsung.png" alt="Samsung" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Samsung</h2>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="card bg-base-100 w-52 shadow-xl">
-            <a href="/pages/iphone.html">
-                <figure>
-                    <img src="/images/iphone.png" alt="iPhone" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">iPhone</h2>
-                </div>
-            </a>
+        <div x-intersect="$el.classList.add('scale2')">
+            <div class="card bg-base-100 w-52 shadow-xl">
+                <a href="/pages/iphone.html">
+                    <figure>
+                        <img src="/images/iphone.png" alt="iPhone" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">iPhone</h2>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="card bg-base-100 w-52 shadow-xl">
-            <a href="/pages/tablet.html">
-                <figure>
-                    <img src="/images/tablet.png" alt="Tablet" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Tablet</h2>
-                </div>
-            </a>
+        <div x-intersect="$el.classList.add('scale2')">
+            <div class="card bg-base-100 w-52 shadow-xl">
+                <a href="/pages/tablet.html">
+                    <figure>
+                        <img src="/images/tablet.png" alt="Tablet" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Tablet</h2>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="card bg-base-100 w-52 shadow-xl">
-            <a href="/pages/ipad.html">
-                <figure>
-                    <img src="/images/ipad.png" alt="iPad" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">iPad</h2>
-                </div>
-            </a>
+        <div x-intersect="$el.classList.add('scale2')">
+            <div class="card bg-base-100 w-52 shadow-xl">
+                <a href="/pages/ipad.html">
+                    <figure>
+                        <img src="/images/ipad.png" alt="iPad" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">iPad</h2>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-
     <div x-html="footerContent"></div>
 </body>
 
