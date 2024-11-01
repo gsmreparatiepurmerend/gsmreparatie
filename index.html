@@ -84,7 +84,7 @@
 
             <!-- Section 3 -->
             <div x-intersect.half="white = false, activeSection = 3" class="h-screen flex items-center justify-center px-4 sm:px-8 md:px-0">
-                <div class="flex justify-center items-center mb-20 border-dotted border-4 max-w-4xl w-full">
+                <div class="flex justify-center items-center mb-20 max-w-4xl w-full">
                     <div class="stats stats-vertical lg:stats-horizontal shadow bg-neutral grid gap-4 p-4 sm:p-8">
                         <div class="stat" x-data="{ visible: false, start: 0, target: 160, duration: 3000 }" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => { const $el = $refs.el; const step = (timestamp) => { if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = Math.floor(percentage * target); $el.innerHTML = value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); } }; window.requestAnimationFrame(step); })">
                             <div class="stat-title">Ondersteunende modellen</div>
