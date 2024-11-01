@@ -1,70 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" xmlns:x-intersect="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style.css">
-    <link rel="stylesheet" href="/public/output.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
-    <link rel="icon" type="image/x-icon" href="/images/gsmReparatiePurmerend.ico">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="/public/style.css" /> <!-- NIEMAND MAG IN DE STYLE.CSS ZONDER MIJ TOESTEMMING -->
+        <link rel="stylesheet" href="/public/output.css" />
+        <title>Reparatie smartphone | Reparatie tablet | GSM Reparatie Purmerend</title>
+        <link rel="icon" type="image/x-icon" href="/images/gsmReparatiePurmerend.ico" />
+    </head>
 
-<body
-    x-data="{white: true, activeSection: 1, navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }"
-    x-init="loadContent()">
-    <div x-html="navContent"></div>
+    <body
+        x-data="{ white: true, activeSection: 1, navContent: '', faqContent: '', footerContent: '', loadContent() { this.fetchNav(); this.fetchFaq(); this.fetchFooter(); }, async fetchNav() { const response = await fetch('/multi-page-changer/nav.html'); this.navContent = await response.text(); }, async fetchFaq() { const response = await fetch('/multi-page-changer/faq.html'); this.faqContent = await response.text(); }, async fetchFooter() { const response = await fetch('/multi-page-changer/footer.html'); this.footerContent = await response.text(); } }"
+        x-init="loadContent()"
+    >
+        <!-- Navbar -->
+        <div x-html="navContent"></div>
 
-    <div class="fixed flex flex-col justify-center h-screen space-y-4 px-10">
-        <div class='w-3 h-3 rounded-full border-2' :class="{'border-white' : white, 'bg-white' : activeSection == 1}">
+        <!-- Section Circles -->
+        <div class="fixed top-1/2 transform -translate-y-1/2 left-4 space-y-4 z-10 hidden md:flex flex-col">
+            <div class="w-3 h-3 rounded-full border-2" :class="{'border-white' : white, 'bg-white' : activeSection == 1}"></div>
+            <div class="w-3 h-3 rounded-full border-2" :class="{'border-white' : white, 'bg-white' : activeSection == 2}"></div>
+            <div class="w-3 h-3 rounded-full border-2" :class="{'border-white' : white, 'bg-white' : activeSection == 3}"></div>
+            <div class="w-3 h-3 rounded-full border-2" :class="{'border-white' : white, 'bg-white' : activeSection == 4}"></div>
         </div>
-        <div class='w-3 h-3 rounded-full border-2' :class="{'border-white' : white, 'bg-white' : activeSection == 2}">
-        </div>
-    </div>
 
-    <div class="sections">
-        <div x-intersect.half='white = true, activeSection = 1' class="h-screen flex items-center justify-center">
-            <div class="hero-content text-center">
-                <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">GSM Reparatie Purmerend</h1>
-                    <p class="py-6 font-bold">Voor uw smartphone reparatie, tablet reparatie én Mac</p>
-                    <button class="btn btn-primary text-white" onclick="my_modal_1.showModal()">Maak nu een
-                        afspraak!</button>
-                    <dialog id="my_modal_1" class="modal">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-lg">Welkom bij GSM Reparatie Purmerend!</h3>
-                            <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de
-                                vrijheid van een perfect werkend apparaat.</p>
-                            <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer
-                                zorgeloos van je mobiele apparaten kunt genieten.</p>
-                            <div class="contact-details mt-5">
-                                <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
-                                <p>Email: <u><a
-                                            href="mailto:info@gsmreparatiepurmerend.nl">info@gsmreparatiepurmerend.nl</a></u>
-                                </p>
-                                <p>Telefoon: <u><a href="tel:0628783641">0628783641</a></u> | <u><a
-                                            href="tel:0299700264">0299700264</a></u></p>
-                            </div>
-                            <div class="modal-action">
-                                <form method="dialog">
-                                    <!-- Als er een knop in het formulier staat, zal dit de modal sluiten -->
-                                    <button class="btn btn-primary text-white">X</button>
-                                </form>
-                            </div>
+        <!-- Sections -->
+        <div class="sections">
+            <!-- Section 1 -->
+            <div
+                x-intersect.half="white = false, activeSection = 1"
+                class="h-screen flex items-center justify-center relative bg-[url('/images/phones.png')] bg-cover bg-center"
+            >
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+                <div class="hero-content text-center px-4 sm:px-8 md:px-0">
+                    <div class="max-w-md mx-auto text-white">
+                        <h1 class="text-4xl sm:text-5xl font-bold mb-4" x-intersect="$el.classList.add('fadeDownIn')">GSM Reparatie Purmerend</h1>
+                        <p class="py-4 font-semibold" x-intersect="$el.classList.add('fadeDownIn')">Voor uw smartphone reparatie, tablet reparatie én Mac</p>
+                        <div x-intersect="$el.classList.add('fadeInUp')">
+                            <button class="btn btn-primary text-white" onclick="my_modal_1.showModal()">Maak nu een afspraak!</button>
                         </div>
-                    </dialog>
+
+                        <!-- Modal -->
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box">
+                                <h3 class="font-bold text-lg">Welkom bij GSM Reparatie Purmerend!</h3>
+                                <p class="py-4">Maak nu een afspraak om jouw telefoon te laten repareren en herontdek de vrijheid van een perfect werkend apparaat.</p>
+                                <p>Ons ervaren team staat klaar om jouw technische problemen op te lossen, zodat jij weer zorgeloos van je mobiele apparaten kunt genieten.</p>
+                                <div class="contact-details mt-5">
+                                    <p>Adres: Wormerplein 42, 1442CB Purmerend</p>
+                                    <p>Email: <u><a href="mailto:info@gsmreparatiepurmerend.nl">info@gsmreparatiepurmerend.nl</a></u></p>
+                                    <p>Telefoon: <u><a href="tel:0628783641">0628783641</a></u> | <u><a href="tel:0299700264">0299700264</a></u></p>
+                                </div>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <button class="btn btn-primary text-white">Sluiten</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div x-intersect.half='white = false, activeSection = 2' class="h-screen flex items-center justify-center">
-            <img src="images/openingstijden.png" alt="">
-        </div>
-    </div>
-    
-    <div x-html="faqContent"></div>
-    <div x-html="footerContent"></div>
 
-    <script src="public/app.js"></script>
-</body>
+            <!-- Section 2 -->
+            <div x-intersect.half="white = false, activeSection = 2" class="h-screen flex flex-col md:flex-row items-center justify-center bg-primary p-6 space-y-6 md:space-y-0 md:space-x-6">
+                <div class="flex-shrink-0">
+                    <img x-intersect="$el.classList.add('scale')" src="images/openingstijden.png" alt="openingstijden" class="w-40 sm:w-52 md:w-60 lg:w-72" />
+                </div>
+                <div class="text-center md:text-left max-w-md mx-auto">
+                    <h1 x-intersect="$el.classList.add('fadeInUp')" class="text-xl sm:text-2xl font-bold mb-2">Openingstijden van onze GSM Reparatiewinkel in Purmerend</h1>
+                    <p x-intersect="$el.classList.add('fadeInUp')">Onze winkel is geopend van maandag tot en met zaterdag, zodat u altijd bij ons terecht kunt voor al uw telefoonreparaties en -accessoires. Kom langs voor deskundig advies en snelle service! Bekijk hieronder onze specifieke openingstijden:</p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 hidden" x-intersect="$el.classList.add('scale')">
+                    <div class="carousel carousel-vertical rounded-box h-64 sm:h-80 md:h-96">
+                        <div class="carousel-item h-full"><img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" /></div>
+                        <div class="carousel-item h-full"><img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" /></div>
+                        <div class="carousel-item h-full"><img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" /></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div x-intersect.half="white = false, activeSection = 3" class="h-screen flex items-center justify-center px-4 sm:px-8 md:px-0">
+                <div class="flex justify-center items-center mb-20 max-w-4xl w-full">
+                    <div class="stats stats-vertical lg:stats-horizontal shadow bg-neutral grid gap-4 p-4 sm:p-8">
+                        <div class="stat" x-data="{ visible: false, start: 0, target: 160, duration: 3000 }" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => { const $el = $refs.el; const step = (timestamp) => { if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = Math.floor(percentage * target); $el.innerHTML = value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); } }; window.requestAnimationFrame(step); })">
+                            <div class="stat-title">Ondersteunende modellen</div>
+                            <div x-ref="el" class="stat-value">0</div>
+                        </div>
+                        <div class="stat" x-data="{ visible: false, start: 0, target: 1476, duration: 3000 }" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => { const $el = $refs.el; const step = (timestamp) => { if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = Math.floor(percentage * target); $el.innerHTML = value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); } }; window.requestAnimationFrame(step); })">
+                            <div class="stat-title">Succesvolle Reparaties</div>
+                            <div x-ref="el" class="stat-value">0</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-title">Partners</div>
+                            <div class="stat-value">10</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-title">Supporter</div>
+                            <div class="stat-value">500+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4 (FAQ) -->
+            <div x-intersect.half="white = false, activeSection = 4" x-html="faqContent"></div>
+
+            <!-- Footer -->
+            <footer x-html="footerContent"></footer>
+        </div>
+    </body>
 </html>
