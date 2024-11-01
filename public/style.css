@@ -23,4 +23,50 @@ html, body {
 .sections {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+@layer utilities {
+  @keyframes fadeDownIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeDownIn {
+    animation: fadeDownIn 1s;
+  }
+}
+@layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeInUp {
+    animation: fadeInUp 1s;
+  }
+}
+@layer utilities {
+  @keyframes scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .scale {
+    animation: scale 1s;
+  }
 }/*# sourceMappingURL=style.css.map */
