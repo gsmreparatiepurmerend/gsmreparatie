@@ -42,3 +42,11 @@ Installeer de benodigde dependencies:
 Start alpine en tailwindcss with:
 * npm run build-css
 * npm run build-js
+
+
+# Deno
+*    deno run --allow-read --allow-net install_dependencies.ts
+
+deno run --allow-read --allow-write --allow-net build_css.ts
+deno run --allow-read --allow-write --allow-net build_js.ts
+
