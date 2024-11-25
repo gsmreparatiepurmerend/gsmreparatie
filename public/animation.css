@@ -71,4 +71,35 @@
   .scale2:nth-child(4) {
     animation-delay: 0.6s;
   }
+}
+.logos {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.logos .logos-slide {
+  display: flex;
+  gap: 20px;
+  animation: scroll 10s linear infinite;
+}
+.logos .logos-slide img {
+  width: 50px;
+  animation: fade 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  20%, 70% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=animation.css.map */

@@ -77,3 +77,40 @@
     }
   }
 }
+
+.logos {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  .logos-slide {
+    display: flex;
+    gap: 20px;
+    animation: scroll 10s linear infinite;
+
+    img {
+      width: 50px;
+      animation: fade 10s linear infinite;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0; // Fully transparent at the start and near the end
+  }
+  20%, 70% {
+    opacity: 1; // Fully visible in the middle
+  }
+}
+
+

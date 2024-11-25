@@ -84,8 +84,29 @@
             </div>
 
             <!-- Section 3 -->
-            <div x-intersect.half="white = false, activeSection = 3" class="h-screen flex items-center justify-center px-4 sm:px-8 md:px-0">
-                <div class="flex justify-center items-center mb-20 max-w-4xl w-full">
+            <div x-intersect.half="white = false, activeSection = 3" class="min-h-screen flex flex-col items-center px-4 sm:px-8 md:px-0 space-y-8">
+
+                <!-- Logos Section -->
+                <div class="logos bg-white   w-full">
+                    <div class="logos-slide flex overflow-x-auto whitespace-nowrap py-4 justify-center">
+                        <!-- Original Logos -->
+                        <img src="./logos/apple.svg" alt="apple logo" class="h-12 mx-4">
+                        <img src="./logos/android.svg" alt="android logo" class="h-12 mx-4">
+                        <img src="./logos/google.svg" alt="google logo" class="h-12 mx-4">
+                        <img src="./logos/huawei.svg" alt="huawei logo" class="h-12 mx-4">
+                        <img src="./logos/lenovo.svg" alt="lenovo logo" class="h-12 mx-4">
+                        <img src="./logos/lg.svg" alt="lg logo" class="h-12 mx-4">
+                        <img src="./logos/nokia.svg" alt="nokia logo" class="h-12 mx-4">
+                        <img src="./logos/sony.svg" alt="sony logo" class="h-12 mx-4">
+                        <img src="./logos/blackberry.svg" alt="blackberry logo" class="h-12 mx-4">
+                        <img src="./logos/htc.svg" alt="htc logo" class="h-12 mx-4">
+                        <img src="./logos/motorola.svg" alt="motorola logo" class="h-12 mx-4">
+                        <img src="./logos/microsoft.svg" alt="microsoft logo" class="h-12 mx-4">
+                    </div>
+                </div>
+            
+                <!-- Stats Section -->
+                <div class="flex justify-center items-center max-w-4xl w-full">
                     <div class="stats stats-vertical lg:stats-horizontal shadow bg-neutral grid gap-4 p-4 sm:p-8">
                         <div class="stat" x-data="{ visible: false, start: 0, target: 160, duration: 3000 }" x-intersect:enter.full="visible = true" x-intersect:leave="visible = false; start = 0" x-init="$watch('visible', value => { const $el = $refs.el; const step = (timestamp) => { if (!start) start = timestamp; const progress = timestamp - start; const percentage = Math.min(progress / duration, 1); const value = Math.floor(percentage * target); $el.innerHTML = value.toLocaleString(); if (progress < duration) { window.requestAnimationFrame(step); } }; window.requestAnimationFrame(step); })">
                             <div class="stat-title">Ondersteunende modellen</div>
@@ -105,7 +126,9 @@
                         </div>
                     </div>
                 </div>
+            
             </div>
+            
 
             <!-- Section 4 (FAQ) -->
             <div x-intersect.half="white = false, activeSection = 4" x-html="faqContent"></div>
