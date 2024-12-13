@@ -1,4 +1,4 @@
-GSM Reparatie Purmerend - Frontend Project
+# GSM Reparatie Purmerend - Frontend Project
 
 Welkom bij de officiële GitHub-repository van het GSM Reparatie Purmerend frontend project! Dit project richt zich op het ontwikkelen van een moderne, gebruiksvriendelijke website voor een telefoonreparatieservice gevestigd in Purmerend. De website biedt bezoekers informatie over de aangeboden diensten, prijzen en de mogelijkheid om gemakkelijk contact op te nemen.
 Technische Specificaties
